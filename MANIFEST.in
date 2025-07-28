@@ -1,0 +1,3 @@
+recursive-include cursor_utils *
+recursive-exclude **/__pycache__ *
+recursive-exclude tests *
