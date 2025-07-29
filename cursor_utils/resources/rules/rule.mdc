@@ -1,4 +1,5 @@
 ---
+# version 0.1.0
 description: 规则
 # 适用于项目中的所有文件
 globs:
@@ -24,6 +25,7 @@ alwaysApply: true
 3.  restart字段应该是unless-stopped
 4.  不要用container_name，env_file，networks字段
 5.  使用环境变量时不要提供默认值，比如${PORT:-80}
+6.  写Dockerfile或者compose.yml时，必须查看当前host上现有的image，然后使用现有的image version
 
 # Python规则
 

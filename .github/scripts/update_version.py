@@ -33,6 +33,14 @@ files_to_update = [
         "replacement": lambda m: f"{m.group('block')}{version}"
         f"{m.group(3)}{version}{m.group(5)}",
     },
+    {
+        "file": "rule.mdc",
+        "pattern": re.compile(
+            r'(?P<block>version:\s+)(?P<version>[^\s]+)',
+            re.DOTALL,
+        ),
+        "replacement": lambda m: f"{m.group('block')}{version}",
+    },
 ]
 
 print(f"Updating version to: {version}\n")
